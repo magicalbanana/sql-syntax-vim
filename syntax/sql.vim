@@ -42,7 +42,7 @@ syn keyword sqlKeyword      initial inner into is join key left level loop
 syn keyword sqlKeyword      maxextents mode modify nocompress nowait object of
 syn keyword sqlKeyword      off offline on online option order outer pctfree
 syn keyword sqlKeyword      primary privileges procedure public references
-syn keyword sqlKeyword      referencing release resource return returns role row rowid
+syn keyword sqlKeyword      referencing release resource return returns returning role row rowid
 syn keyword sqlKeyword      rowlabel rownum rows schema session share size
 syn keyword sqlKeyword      start security successful synonym then to transaction trigger
 syn keyword sqlKeyword      uid user using validate values view virtual whenever
