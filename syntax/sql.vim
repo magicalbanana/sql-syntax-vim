@@ -115,7 +115,7 @@ syn match   sqlFunction     "^\.\w\+"
 " Statements
 syn keyword sqlStatement    alter analyze audit begin comment commit delete
 syn keyword sqlStatement    drop execute explain grant insert lock noaudit
-syn keyword sqlStatement    rename revoke rollback savepoint select
+syn keyword sqlStatement    query rename revoke rollback savepoint select
 syn keyword sqlStatement    truncate update vacuum
 syn match   sqlStatement    "\<\(replace\|create\)\>"
 
