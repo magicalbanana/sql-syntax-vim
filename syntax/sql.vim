@@ -211,6 +211,257 @@ syn match   sqlSetValues    contained "\<\(intermed\w*\|pre\w*\|unl\w*\|for\w*\|
 syn match   sqlSetValues    contained "\<\(vis\w*\|inv\w*\)\>"
 syn match   sqlSetValues    contained "\<\(\(un\)\?ordered\)\>"
 
+" PostGIS
+syn keyword sqlFunction contained addauth addgeometrycolumn
+syn keyword sqlFunction contained addoverviewconstraints addrasterconstraints box box2d
+syn keyword sqlFunction contained box2d_in box2d_out box2df_in
+syn keyword sqlFunction contained box2df_out box3d box3d_in box3d_out
+syn keyword sqlFunction contained box3dtobox bytea checkauth checkauthtrigger
+syn keyword sqlFunction contained contains_2d disablelongtransactions
+syn keyword sqlFunction contained dropgeometrycolumn dropgeometrytable
+syn keyword sqlFunction contained dropoverviewconstraints droprasterconstraints
+syn keyword sqlFunction contained enablelongtransactions equals find_srid
+syn keyword sqlFunction contained geog_brin_inclusion_add_value geography geography_analyze
+syn keyword sqlFunction contained geography_cmp geography_distance_knn geography_eq
+syn keyword sqlFunction contained geography_ge geography_gist_compress
+syn keyword sqlFunction contained geography_gist_consistent geography_gist_decompress
+syn keyword sqlFunction contained geography_gist_distance geography_gist_penalty
+syn keyword sqlFunction contained geography_gist_picksplit geography_gist_same
+syn keyword sqlFunction contained geography_gist_union geography_gt geography_in
+syn keyword sqlFunction contained geography_le geography_lt geography_out
+syn keyword sqlFunction contained geography_overlaps geography_recv
+syn keyword sqlFunction contained geography_send geography_typmod_in geography_typmod_out
+syn keyword sqlFunction contained geom2d_brin_inclusion_add_value
+syn keyword sqlFunction contained geom3d_brin_inclusion_add_value geom4d_brin_inclusion_add_value
+syn keyword sqlFunction contained geometry geometry_above geometry_analyze
+syn keyword sqlFunction contained geometry_below geometry_cmp
+syn keyword sqlFunction contained geometry_contained_3d geometry_contained_by_raster
+syn keyword sqlFunction contained geometry_contains geometry_contains_3d
+syn keyword sqlFunction contained geometry_distance_box geometry_distance_centroid
+syn keyword sqlFunction contained geometry_distance_centroid_nd geometry_distance_cpa geometry_eq
+syn keyword sqlFunction contained geometry_ge geometry_gist_compress_2d
+syn keyword sqlFunction contained geometry_gist_compress_nd geometry_gist_consistent_2d
+syn keyword sqlFunction contained geometry_gist_consistent_nd
+syn keyword sqlFunction contained geometry_gist_decompress_2d geometry_gist_decompress_nd
+syn keyword sqlFunction contained geometry_gist_distance_2d geometry_gist_distance_nd
+syn keyword sqlFunction contained geometry_gist_penalty_2d geometry_gist_penalty_nd
+syn keyword sqlFunction contained geometry_gist_picksplit_2d geometry_gist_picksplit_nd
+syn keyword sqlFunction contained geometry_gist_same_2d geometry_gist_same_nd
+syn keyword sqlFunction contained geometry_gist_union_2d geometry_gist_union_nd
+syn keyword sqlFunction contained geometry_gt geometry_hash geometry_in
+syn keyword sqlFunction contained geometry_le geometry_left geometry_lt
+syn keyword sqlFunction contained geometry_out geometry_overabove geometry_overbelow
+syn keyword sqlFunction contained geometry_overlaps geometry_overlaps_3d
+syn keyword sqlFunction contained geometry_overlaps_nd geometry_overleft
+syn keyword sqlFunction contained geometry_overright geometry_raster_contain
+syn keyword sqlFunction contained geometry_raster_overlap geometry_recv geometry_right
+syn keyword sqlFunction contained geometry_same geometry_same_3d geometry_send
+syn keyword sqlFunction contained geometry_spgist_choose_2d geometry_spgist_choose_3d
+syn keyword sqlFunction contained geometry_spgist_compress_2d
+syn keyword sqlFunction contained geometry_spgist_compress_3d geometry_spgist_config_2d
+syn keyword sqlFunction contained geometry_spgist_config_3d geometry_spgist_inner_consistent_2d
+syn keyword sqlFunction contained geometry_spgist_inner_consistent_3d
+syn keyword sqlFunction contained geometry_spgist_leaf_consistent_2d geometry_spgist_leaf_consistent_3d
+syn keyword sqlFunction contained geometry_spgist_picksplit_2d
+syn keyword sqlFunction contained geometry_spgist_picksplit_3d geometry_typmod_in
+syn keyword sqlFunction contained geometry_typmod_out geometry_within geometrytype
+syn keyword sqlFunction contained geomfromewkb geomfromewkt get_proj4_from_srid
+syn keyword sqlFunction contained gettransactionid gidx_in gidx_out
+syn keyword sqlFunction contained gserialized_gist_joinsel_2d gserialized_gist_joinsel_nd
+syn keyword sqlFunction contained gserialized_gist_sel_2d gserialized_gist_sel_nd
+syn keyword sqlFunction contained is_contained_2d lockrow longtransactionsenabled
+syn keyword sqlFunction contained overlaps_2d overlaps_geog overlaps_nd
+syn keyword sqlFunction contained path pgis_asgeobuf_finalfn
+syn keyword sqlFunction contained pgis_asgeobuf_transfn pgis_asmvt_combinefn pgis_asmvt_deserialfn
+syn keyword sqlFunction contained pgis_asmvt_finalfn pgis_asmvt_serialfn
+syn keyword sqlFunction contained pgis_asmvt_transfn pgis_geometry_accum_finalfn
+syn keyword sqlFunction contained pgis_geometry_accum_transfn
+syn keyword sqlFunction contained pgis_geometry_clusterintersecting_finalfn pgis_geometry_clusterwithin_finalfn
+syn keyword sqlFunction contained pgis_geometry_collect_finalfn
+syn keyword sqlFunction contained pgis_geometry_makeline_finalfn pgis_geometry_polygonize_finalfn
+syn keyword sqlFunction contained pgis_geometry_union_finalfn point polygon
+syn keyword sqlFunction contained populate_geometry_columns postgis_addbbox
+syn keyword sqlFunction contained postgis_cache_bbox postgis_constraint_dims
+syn keyword sqlFunction contained postgis_constraint_srid postgis_constraint_type
+syn keyword sqlFunction contained postgis_dropbbox postgis_extensions_upgrade
+syn keyword sqlFunction contained postgis_full_version postgis_gdal_version
+syn keyword sqlFunction contained postgis_geos_version postgis_getbbox postgis_hasbbox
+syn keyword sqlFunction contained postgis_lib_build_date postgis_lib_version
+syn keyword sqlFunction contained postgis_libjson_version postgis_liblwgeom_version
+syn keyword sqlFunction contained postgis_libprotobuf_version postgis_libxml_version
+syn keyword sqlFunction contained postgis_noop postgis_proj_version
+syn keyword sqlFunction contained postgis_raster_lib_build_date postgis_raster_lib_version
+syn keyword sqlFunction contained postgis_raster_scripts_installed
+syn keyword sqlFunction contained postgis_scripts_build_date postgis_scripts_installed
+syn keyword sqlFunction contained postgis_scripts_released postgis_svn_version
+syn keyword sqlFunction contained postgis_transform_geometry postgis_type_name postgis_typmod_dims
+syn keyword sqlFunction contained postgis_typmod_srid postgis_typmod_type
+syn keyword sqlFunction contained postgis_version raster_above raster_below
+syn keyword sqlFunction contained raster_contain raster_contained
+syn keyword sqlFunction contained raster_contained_by_geometry raster_eq raster_geometry_contain
+syn keyword sqlFunction contained raster_geometry_overlap raster_hash
+syn keyword sqlFunction contained raster_in raster_left raster_out
+syn keyword sqlFunction contained raster_overabove raster_overbelow raster_overlap
+syn keyword sqlFunction contained raster_overleft raster_overright raster_right
+syn keyword sqlFunction contained raster_same spheroid_in spheroid_out
+syn keyword sqlFunction contained st_3dclosestpoint st_3ddfullywithin st_3ddistance
+syn keyword sqlFunction contained st_3ddwithin st_3dextent st_3dintersects
+syn keyword sqlFunction contained st_3dlength st_3dlength_spheroid
+syn keyword sqlFunction contained st_3dlongestline st_3dmakebox st_3dmaxdistance
+syn keyword sqlFunction contained st_3dperimeter st_3dshortestline st_accum
+syn keyword sqlFunction contained st_addband st_addmeasure st_addpoint
+syn keyword sqlFunction contained st_affine st_angle st_approxcount
+syn keyword sqlFunction contained st_approxhistogram st_approxquantile st_approxsummarystats
+syn keyword sqlFunction contained st_area st_area2d st_asbinary
+syn keyword sqlFunction contained st_asencodedpolyline st_asewkb st_asewkt
+syn keyword sqlFunction contained st_asgdalraster st_asgeobuf st_asgeojson
+syn keyword sqlFunction contained st_asgml st_ashexewkb st_ashexwkb st_asjpeg
+syn keyword sqlFunction contained st_askml st_aslatlontext st_asmvt
+syn keyword sqlFunction contained st_asmvtgeom st_aspect st_aspng st_asraster
+syn keyword sqlFunction contained st_assvg st_astext st_astiff
+syn keyword sqlFunction contained st_astwkb st_aswkb st_asx3d st_azimuth
+syn keyword sqlFunction contained st_band st_bandfilesize st_bandfiletimestamp
+syn keyword sqlFunction contained st_bandisnodata st_bandmetadata
+syn keyword sqlFunction contained st_bandnodatavalue st_bandpath st_bandpixeltype
+syn keyword sqlFunction contained st_bdmpolyfromtext st_bdpolyfromtext st_boundary
+syn keyword sqlFunction contained st_boundingdiagonal st_box2dfromgeohash
+syn keyword sqlFunction contained st_buffer st_buildarea st_centroid
+syn keyword sqlFunction contained st_chaikinsmoothing st_cleangeometry st_clip
+syn keyword sqlFunction contained st_clipbybox2d st_closestpoint st_closestpointofapproach
+syn keyword sqlFunction contained st_clusterdbscan st_clusterintersecting
+syn keyword sqlFunction contained st_clusterkmeans st_clusterwithin st_collect
+syn keyword sqlFunction contained st_collectionextract st_collectionhomogenize
+syn keyword sqlFunction contained st_colormap st_combine_bbox st_combinebbox
+syn keyword sqlFunction contained st_concavehull st_contains
+syn keyword sqlFunction contained st_containsproperly st_convexhull st_coorddim st_count
+syn keyword sqlFunction contained st_countagg st_coveredby st_covers
+syn keyword sqlFunction contained st_cpawithin st_createoverview st_crosses
+syn keyword sqlFunction contained st_curvetoline st_delaunaytriangles
+syn keyword sqlFunction contained st_dfullywithin st_difference st_dimension
+syn keyword sqlFunction contained st_disjoint st_distance st_distance_sphere
+syn keyword sqlFunction contained st_distance_spheroid st_distancecpa st_distancesphere
+syn keyword sqlFunction contained st_distancespheroid st_distinct4ma st_dump
+syn keyword sqlFunction contained st_dumpaspolygons st_dumppoints
+syn keyword sqlFunction contained st_dumprings st_dumpvalues st_dwithin st_endpoint
+syn keyword sqlFunction contained st_envelope st_equals
+syn keyword sqlFunction contained st_estimated_extent st_estimatedextent st_expand st_extent
+syn keyword sqlFunction contained st_exteriorring st_filterbym
+syn keyword sqlFunction contained st_find_extent st_findextent st_flipcoordinates
+syn keyword sqlFunction contained st_force2d st_force3d st_force3dm st_force3dz
+syn keyword sqlFunction contained st_force4d st_force_2d st_force_3d
+syn keyword sqlFunction contained st_force_3dm st_force_3dz st_force_4d
+syn keyword sqlFunction contained st_force_collection st_forcecollection
+syn keyword sqlFunction contained st_forcecurve st_forcepolygonccw st_forcepolygoncw
+syn keyword sqlFunction contained st_forcerhr st_forcesfs st_frechetdistance
+syn keyword sqlFunction contained st_fromgdalraster st_gdaldrivers
+syn keyword sqlFunction contained st_generatepoints st_geogfromtext st_geogfromwkb
+syn keyword sqlFunction contained st_geographyfromtext st_geohash st_geomcollfromtext
+syn keyword sqlFunction contained st_geomcollfromwkb st_geometricmedian
+syn keyword sqlFunction contained st_geometryfromtext st_geometryn st_geometrytype
+syn keyword sqlFunction contained st_geomfromewkb st_geomfromewkt
+syn keyword sqlFunction contained st_geomfromgeohash st_geomfromgeojson st_geomfromgml
+syn keyword sqlFunction contained st_geomfromkml st_geomfromtext
+syn keyword sqlFunction contained st_geomfromtwkb st_geomfromwkb st_georeference
+syn keyword sqlFunction contained st_geotransform st_gmltosql st_grayscale
+syn keyword sqlFunction contained st_hasarc st_hasnoband st_hausdorffdistance
+syn keyword sqlFunction contained st_height st_hillshade st_histogram
+syn keyword sqlFunction contained st_interiorringn st_interpolatepoint st_intersection
+syn keyword sqlFunction contained st_intersects st_invdistweight4ma st_isclosed
+syn keyword sqlFunction contained st_iscollection st_iscoveragetile
+syn keyword sqlFunction contained st_isempty st_ispolygonccw st_ispolygoncw
+syn keyword sqlFunction contained st_isring st_issimple st_isvalid
+syn keyword sqlFunction contained st_isvaliddetail st_isvalidreason st_isvalidtrajectory
+syn keyword sqlFunction contained st_length st_length2d st_length2d_spheroid
+syn keyword sqlFunction contained st_length2dspheroid st_length_spheroid
+syn keyword sqlFunction contained st_lengthspheroid st_line_interpolate_point
+syn keyword sqlFunction contained st_line_locate_point st_line_substring
+syn keyword sqlFunction contained st_linecrossingdirection st_linefromencodedpolyline
+syn keyword sqlFunction contained st_linefrommultipoint st_linefromtext st_linefromwkb
+syn keyword sqlFunction contained st_lineinterpolatepoint st_lineinterpolatepoints
+syn keyword sqlFunction contained st_linelocatepoint st_linemerge
+syn keyword sqlFunction contained st_linestringfromwkb st_linesubstring st_linetocurve
+syn keyword sqlFunction contained st_locate_along_measure st_locate_between_measures
+syn keyword sqlFunction contained st_locatealong st_locatebetween
+syn keyword sqlFunction contained st_locatebetweenelevations st_longestline st_m
+syn keyword sqlFunction contained st_makebox2d st_makeemptycoverage st_makeemptyraster
+syn keyword sqlFunction contained st_makeenvelope st_makeline st_makepoint
+syn keyword sqlFunction contained st_makepointm st_makepolygon
+syn keyword sqlFunction contained st_makevalid st_mapalgebra st_mapalgebraexpr
+syn keyword sqlFunction contained st_mapalgebrafct st_mapalgebrafctngb st_max4ma
+syn keyword sqlFunction contained st_maxdistance st_mean4ma st_mem_size
+syn keyword sqlFunction contained st_memcollect st_memsize st_memunion
+syn keyword sqlFunction contained st_metadata st_min4ma st_minconvexhull
+syn keyword sqlFunction contained st_mindist4ma st_minimumboundingcircle
+syn keyword sqlFunction contained st_minimumboundingradius st_minimumclearance
+syn keyword sqlFunction contained st_minimumclearanceline st_minpossiblevalue st_mlinefromtext
+syn keyword sqlFunction contained st_mlinefromwkb st_mpointfromtext
+syn keyword sqlFunction contained st_mpointfromwkb st_mpolyfromtext st_mpolyfromwkb
+syn keyword sqlFunction contained st_multi st_multilinefromwkb
+syn keyword sqlFunction contained st_multilinestringfromtext st_multipointfromtext st_multipointfromwkb
+syn keyword sqlFunction contained st_multipolyfromwkb st_multipolygonfromtext
+syn keyword sqlFunction contained st_ndims st_nearestvalue st_neighborhood
+syn keyword sqlFunction contained st_node st_normalize
+syn keyword sqlFunction contained st_notsamealignmentreason st_npoints st_nrings st_numbands
+syn keyword sqlFunction contained st_numgeometries st_numinteriorring
+syn keyword sqlFunction contained st_numinteriorrings st_numpatches st_numpoints
+syn keyword sqlFunction contained st_offsetcurve st_orderingequals
+syn keyword sqlFunction contained st_orientedenvelope st_overlaps st_patchn st_perimeter
+syn keyword sqlFunction contained st_perimeter2d st_pixelascentroid
+syn keyword sqlFunction contained st_pixelascentroids st_pixelaspoint st_pixelaspoints
+syn keyword sqlFunction contained st_pixelaspolygon st_pixelaspolygons
+syn keyword sqlFunction contained st_pixelheight st_pixelofvalue st_pixelwidth
+syn keyword sqlFunction contained st_point st_point_inside_circle st_pointfromgeohash
+syn keyword sqlFunction contained st_pointfromtext st_pointfromwkb
+syn keyword sqlFunction contained st_pointinsidecircle st_pointn st_pointonsurface
+syn keyword sqlFunction contained st_points st_polyfromtext st_polyfromwkb
+syn keyword sqlFunction contained st_polygon st_polygonfromtext
+syn keyword sqlFunction contained st_polygonfromwkb st_polygonize st_project st_quantile
+syn keyword sqlFunction contained st_quantizecoordinates st_range4ma
+syn keyword sqlFunction contained st_rastertoworldcoord st_rastertoworldcoordx
+syn keyword sqlFunction contained st_rastertoworldcoordy st_rastfromhexwkb st_rastfromwkb
+syn keyword sqlFunction contained st_reclass st_relate st_relatematch
+syn keyword sqlFunction contained st_removepoint st_removerepeatedpoints
+syn keyword sqlFunction contained st_resample st_rescale st_resize st_reskew
+syn keyword sqlFunction contained st_retile st_reverse st_rotate st_rotatex
+syn keyword sqlFunction contained st_rotatey st_rotatez st_rotation
+syn keyword sqlFunction contained st_roughness st_samealignment st_scale
+syn keyword sqlFunction contained st_scalex st_scaley st_segmentize
+syn keyword sqlFunction contained st_setbandindex st_setbandisnodata st_setbandnodatavalue
+syn keyword sqlFunction contained st_setbandpath st_seteffectivearea
+syn keyword sqlFunction contained st_setgeoreference st_setgeotransform st_setpoint
+syn keyword sqlFunction contained st_setrotation st_setscale st_setskew
+syn keyword sqlFunction contained st_setsrid st_setupperleft st_setvalue
+syn keyword sqlFunction contained st_setvalues st_sharedpaths st_shift_longitude
+syn keyword sqlFunction contained st_shiftlongitude st_shortestline
+syn keyword sqlFunction contained st_simplify st_simplifypreservetopology st_simplifyvw
+syn keyword sqlFunction contained st_skewx st_skewy st_slope st_snap
+syn keyword sqlFunction contained st_snaptogrid st_split st_srid
+syn keyword sqlFunction contained st_startpoint st_stddev4ma st_subdivide
+syn keyword sqlFunction contained st_sum4ma st_summary st_summarystats
+syn keyword sqlFunction contained st_summarystatsagg st_swapordinates st_symdifference
+syn keyword sqlFunction contained st_symmetricdifference st_tile st_touches
+syn keyword sqlFunction contained st_tpi st_transform st_translate
+syn keyword sqlFunction contained st_transscale st_tri st_unaryunion st_union
+syn keyword sqlFunction contained st_upperleftx st_upperlefty st_value
+syn keyword sqlFunction contained st_valuecount st_valuepercent st_voronoilines
+syn keyword sqlFunction contained st_voronoipolygons st_width st_within
+syn keyword sqlFunction contained st_wkbtosql st_wkttosql st_worldtorastercoord
+syn keyword sqlFunction contained st_worldtorastercoordx st_worldtorastercoordy
+syn keyword sqlFunction contained st_wrapx st_x st_xmax st_xmin
+syn keyword sqlFunction contained st_y st_ymax st_ymin st_z st_zmax
+syn keyword sqlFunction contained st_zmflag st_zmin text unlockrows
+syn keyword sqlFunction contained updategeometrysrid updaterastersrid
+syn keyword sqlTable contained spatial_ref_sys
+syn keyword sqlType contained addbandarg agg_count agg_samealignment
+syn keyword sqlType contained box2d box2df box3d geography
+syn keyword sqlType contained geometry geometry_dump geomval gidx
+syn keyword sqlType contained rastbandarg raster reclassarg spheroid
+syn keyword sqlType contained summarystats unionarg valid_detail
+syn keyword sqlView contained geography_columns geometry_columns
+syn keyword sqlView contained raster_columns raster_overviews
+syn keyword sqlFunction contained geometry_eq pgis_abs_in pgis_abs_out pgis_abs
+
+
 " Stolen from sh.vim.
 if !exists("sh_minlines")
   let sh_minlines = 200
